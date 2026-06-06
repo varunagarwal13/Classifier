@@ -29,7 +29,7 @@ def startup():
 print("Loading models...")
 rf  = joblib.load("model_rf_v2.pkl")
 xgb = joblib.load("model_xgb_v2.pkl")
-FEATURE_COLS = joblib.load("C:\\Users\\varun\\feature_cols_v2.pkl")
+FEATURE_COLS = joblib.load("feature_cols_v2.pkl")
 print(f"Models loaded. Features: {len(FEATURE_COLS)}")
 
 cache = redis.Redis(host="127.0.0.1", port=6379, db=0, decode_responses=True)
